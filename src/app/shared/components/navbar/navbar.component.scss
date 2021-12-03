@@ -1,0 +1,19 @@
+.triangle {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  //border: 1px solid black;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 100px;
+    transform-origin: center center;
+    transform: rotate(45deg);
+    background: white;
+  }
+}

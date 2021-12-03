@@ -1,0 +1,81 @@
+<div class='relative container'>
+  <nav class='relative aspect-w-9 aspect-h-13 bg-red-300 sm:aspect-w-16 sm:aspect-h-9'>
+
+    <!--  image header mobile -->
+    <img class='absolute inset-0 w-full h-full object-cover object-center' src='/assets/images/mobile/image-header.jpg'
+         alt='Image header mobile'>
+    <!--  end image header mobile -->
+
+    <!--  image header desktop-->
+    <img class='absolute inset-0 w-full h-full object-cover object-center' src='/assets/images/desktop/image-header.jpg'
+         alt='Image header desktop'>
+    <!--  end image header desktop -->
+  </nav>
+
+  <div class='absolute top-0 left-0 w-full h-full'>
+    <!--  logo and hamburger menu-->
+    <div *ngIf='!isActive' class='mt-8 px-8 flex justify-between'>
+      <div>
+        <img src='/assets/images/logo.svg' alt='Logo'>
+      </div>
+
+      <!--      hamburger-->
+      <div (click)='isActive = true' class='cursor-pointer md:hidden'>
+        <img src='/assets/images/icon-hamburger.svg' alt='Hamburger'>
+      </div>
+      <!--      end hamburger-->
+
+      <!--      links desktop-->
+      <ul class='flex items-center gap-10 hidden md:flex'>
+        <li><a class='text-white font-semibold' href='#'>About</a></li>
+        <li><a class='text-white font-semibold' href='#'>Services</a></li>
+        <li><a class='text-white font-semibold' href='#'>Projects</a></li>
+        <li><a
+          class='text-very-grayish-blue font-heading uppercase font-semibold bg-white btn hover:text-white hover:bg-blue-300'
+          href='#'>Contact</a></li>
+      </ul>
+      <!--      end links desktop-->
+    </div>
+    <!--  end logo and hamburger menu-->
+
+    <div class='w-full h-full flex flex-col justify-center items-center'>
+      <h1
+        class='text-white uppercase font-black text-4xl text-center tracking-[6px] sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl'>
+        We are
+        creatives</h1>
+
+      <img class='mt-14 sm:mt-10 md:mt-20' src='/assets/images/icon-arrow-down.svg' alt='Arrow down'>
+    </div>
+  </div>
+
+</div>
+
+<!--modal-->
+<lbk-modal-ng-content *ngIf='isActive'>
+  <div class='container px-8'>
+    <div class='mt-8 flex justify-between'>
+      <div>
+        <img src='/assets/images/logo.svg' alt='Logo'>
+      </div>
+
+      <div (click)='isActive = false' class='cursor-pointer'>
+        <img src='/assets/images/icon-close.svg' alt='Hamburger'>
+      </div>
+    </div>
+
+    <!--    links-->
+    <div class='mt-10 flex flex-col'>
+      <!-- square triangle -->
+      <div class='triangle justify-self-end self-end'></div>
+      <!-- end square triangle -->
+      <ul class='flex flex-col justify-center items-center gap-8 bg-white py-10'>
+        <li><a class='font-semibold text-gray-400 text-lg' href='#'>About</a></li>
+        <li><a class='font-semibold text-gray-400 text-lg' href='#'>Services</a></li>
+        <li><a class='font-semibold text-gray-400 text-lg' href='#'>Projects</a></li>
+        <li><a class='font-semibold text-lg btn bg-yellow' href='#'>Contact</a></li>
+      </ul>
+    </div>
+    <!--    end links-->
+  </div>
+</lbk-modal-ng-content>
+<!--end modal-->

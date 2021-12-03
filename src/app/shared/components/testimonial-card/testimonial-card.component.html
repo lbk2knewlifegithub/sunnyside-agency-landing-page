@@ -1,0 +1,30 @@
+<div class='px-2 flex flex-col justify-center items-center space-y-8 max-w-md'>
+  <!--  avatar-->
+  <div class='relative w-20 h-20 rounded-full overflow-hidden'>
+    <img class='absolute inset-0 w-full h-full object-cover object-center' [src]='testimonial.src'
+         [alt]='testimonial.name'>
+  </div>
+  <!--  end avatar-->
+
+  <!--  comment-->
+  <p class='text-center font-bold text-dark-grayish-blue'>
+    {{testimonial.comment}}
+  </p>
+  <!--  end comment-->
+
+  <!--  name and job-->
+  <div>
+    <!--  name-->
+    <h6 class='text-center font-black text-lg text-very-dark-grayish-blue'>
+      {{testimonial.name}}
+    </h6>
+    <!--  end name-->
+
+    <!--  job-->
+    <p class='text-center text-grayish-blue'>
+      {{testimonial.job}}
+    </p>
+    <!--  end job-->
+  </div>
+  <!--  end name and job-->
+</div>

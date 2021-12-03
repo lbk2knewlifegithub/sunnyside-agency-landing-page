@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+// CUSTOM FONT HERE
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    --color-soft-red: 7, 99%, 70%;
+    --color-yellow: 51, 100%, 49%;
+    //graphic design text
+    --color-dark-desaturated-cyan: 167, 40%, 24%;
+    //photography text
+    --color-dark-blue: 198, 62%, 26%;
+    //footer
+    --color-dark-moderate-cyan: 168, 34%, 41%;
+    --color-very-dark-desaturated-blue: 212, 27%, 19%;
+
+    --color-very-dark-grayish-blue: 213, 9%, 39%;
+    --color-dark-grayish-blue: hsl(232, 10%, 55%);
+    --color-grayish-blue: 210, 4%, 67%;
+    --color-white: 0, 0%, 100%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+@layer utilities {
+  .btn {
+    @apply rounded-full px-7 py-4;
+  }
+}
